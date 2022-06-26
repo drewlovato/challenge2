@@ -1,38 +1,93 @@
+body{
+    width: 100%;
+    height:100%;
+    margin: 0%;
+}
+
 header{
     width: 100%;
-    height: 50px;
+    height: 60px;
+    padding-bottom: 50px;
 }
 
-img{
-    padding: 10px;
+.logo-image{
+    padding: 10px 10px;
+    width: 40px;
+    height:auto;
 }
 
-ul{
+nav ul{
     width: auto;
     float: right;
-    margin-top: 10px;
-    padding: 0%;
 }
 
-li{
+nav li{
     display: inline-block;
     padding: 5px 30px;
 }
 
-a{
-    text-align: center;
+nav a{
+    align-content: center;
     color: black;
     text-decoration: none;
-    font-family: sans-serif;
+    font-family: 'Cairo', sans-serif;
 }
 
-
-.logo-image{
-    max-width: 30px;
-    max-height: auto;
+nav a:hover{
+    transition: .4s;
+    color: blanchedalmond;
 }
 
+/* Start of "About" section */
+/*Hero-Image (Largest beginning of page)*/
+.about{
+    padding-bottom: 75px;
+}
 
+.hero-image{
+    width: 750px;
+    height: auto;
+    padding-left: 50px;
+}
 
+.about h1{
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
+}
 
-l
+.about ul{
+    width: 420px;
+    float: right;
+    padding-right: 80px;
+}
+
+.about p{
+    text-align: justify;
+    padding: 40px 60px 0px 30px;
+    margin: 0%;
+    font-family: 'Cairo', sans-serif;
+}
+
+/* Start of "Wireframe" section*/
+.wireframe{
+    width: 100%;
+    height:auto
+}
+
+#wireframe-heading{
+    text-align: center;
+}
+
+.wireframe ul{
+    width: 75%;
+    justify-content: center;
+}
+
+.wireframe li{
+    box-sizing: border-box;
+    border-radius: 0%;
+    border-color: beige;
+    background-color: tomato;
+}
+
+/* Media-Qeury START*/
