@@ -1,30 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+/* Start of "Global Style" section */
 body{
     width: 100%;
     height: 100%;
     margin: 0%;
 }
 
-/* Start of "Header" section*/
+/* Start of "Header" section */
 header{
+    display: flex;
+    justify-content: center;
     width: 100%;
-    height: 200px;
     padding-bottom: 10px;
 }
 
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 nav img{
-    padding: 20px 20px; 
     width: 40px;
-    margin-left: 47%;
 }
 
 nav ul{
-    width: auto;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 40px;
 }
 
 nav li{
-    display: inline-block;
-    padding: 5px 30px;
+    /* display: inline-block; */
+    margin: 0 30px;
 }
 
 nav a{
@@ -46,19 +60,21 @@ nav a:hover{
     height: auto;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 #about img{
-    width: 440px;
-    height: auto;
-    float: left;
+    width: 35%;
+    /* float: left; */
 }
 
 #about section{
     height: auto;
-    float: right;
     display: block;
+    justify-content: space-around;
     width: 400px;
+    
+
 }
 
 #about h1{
@@ -68,7 +84,7 @@ nav a:hover{
 }
 
 #about p{
-    width: 400px;
+    width: 100%;
     height: auto;
     float: right;
     font-size: 1em;
@@ -95,26 +111,44 @@ h1{
     flex-wrap: wrap;
 }
 
+#wireframe section:first-child {
+    width: 75%;
+}
+
 #wireframe img{
-    width: 350px;
-    height: auto;
-    padding: 0px 30px 5px 30px;
-}
-
-.wireframe-broder img{
     transition: 1s ease;
+    width: 100%;
 }
 
-.wireframe-border img:hover{
+#wireframe img:hover{
     -webkit-transform: scale(.98);
     -ms-transform: scale(.98);
     transform: scale(.98);
     transition: 1s ease;
 }
 
-#wireframe p{
+.first-selection img{
+    display: block;
+}
+
+.first-selection p{
     text-align: center;
+    color: black;
     font-family: 'Cairo', sans-serif;
+    margin-top: 30px;
+}
+
+.second-selection img{
+    width: 100%;
+    display: block;
+    justify-content: space-evenly;
+}
+
+.second-selection p{
+    text-align: center;
+    color: black;
+    font-family: 'Cairo', sans-serif;
+    margin-top: 30px;
 }
 
 /* Start of "Contact" section */
@@ -128,14 +162,21 @@ h1{
     font-family: 'Cairo', sans-serif;
 }
 
-#contact h1{
-    width: 300px;
+#contact .one{
+    width: 400px;
     height: auto;
     float: left;
-    display: flex;
+    
 }
 
-#contact section{
+#contact .one h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+}
+
+#contact .two{
     width: 400px;
     height: auto;
     float: right;
@@ -168,4 +209,32 @@ footer h2{
     font-family: 'Cairo', sans-serif;
 }
 
-/* Media-Qeury START*/
+/* Start of "Media Query" section */
+@media screen and (max-width: 390px){
+
+    nav ul{
+       flex-direction: column;
+       align-items: center;
+   }
+   nav li{
+       margin: 0;
+   }
+   #about{
+       flex-direction: column;
+       align-content: center;
+       justify-content: center;
+   }
+   #about img{
+        width: 100%;
+   }
+
+   #wireframe{
+       width: 100%;
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .first-selection{
+       width: 100%;
+   }
+}
